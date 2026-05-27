@@ -55,7 +55,7 @@ func main() {
 
 	addr := os.Getenv("ADDR")
 	if addr == "" {
-		addr = ":91942"
+		addr = ":9194"
 	}
 
 	if err := r.Run(addr); err != nil {
@@ -77,7 +77,7 @@ What this gives you:
   - `GET /favicon.ico`
  
 Coverage:
-- Components and patterns implemented in this module are listed in [DESIGN_SYSTEM_COVERAGE.md](/DESIGN_SYSTEM_COVERAGE.md).
+- Components and patterns implemented in this module are listed in [here](/DESIGN_SYSTEM_COVERAGE.md).
 
 Versioning:
 - Prefer a tag (e.g. `@v1.0.0`) rather than `@main`.
@@ -97,9 +97,13 @@ g.Mount(r)
 
 ```bash
 go run ./cmd/example-gin-app
+
+## OR ##
+
+make example
 ```
 
-- Home page: `http://localhost:91942/`
+- Home page: `http://localhost:9194/`
 
 ### License
 

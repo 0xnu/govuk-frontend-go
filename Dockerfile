@@ -10,7 +10,6 @@ FROM gcr.io/distroless/static:nonroot
 
 WORKDIR /
 COPY --from=build /out/example /example
-EXPOSE 91942
+EXPOSE 9194
 USER nonroot:nonroot
 ENTRYPOINT ["/example"]
-
