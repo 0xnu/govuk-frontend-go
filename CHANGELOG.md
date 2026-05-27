@@ -1,8 +1,10 @@
 ## CHANGELOG
 
+### 1.0.2 (27/05/2026)
+* Support configuring example listen address via ADDR env var (with PORT fallback)
+
 ### 1.0.1 (27/05/2026)
 * Fixed invalid default example port (91942 -> 9194)
-* Support configuring example listen address via ADDR env var (with PORT fallback)
 
 ### 1.0.0 (25/05/2026)
 * Initial release
