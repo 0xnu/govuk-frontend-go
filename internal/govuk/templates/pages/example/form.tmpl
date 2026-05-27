@@ -1,0 +1,13 @@
+{{define "form"}}
+{{template "base" .}}
+{{end}}
+
+{{define "content"}}
+<h1 class="govuk-heading-l">Example form</h1>
+{{if .ErrorSummaryHTML}}{{.ErrorSummaryHTML}}{{end}}
+<form method="post" novalidate>
+  {{.InputHTML}}
+  {{.ButtonHTML}}
+</form>
+{{end}}
+

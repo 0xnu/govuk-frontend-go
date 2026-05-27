@@ -1,0 +1,13 @@
+package check_a_service_is_suitable
+
+import (
+	"html/template"
+
+	internal "github.com/0xnu/govuk-frontend-go/internal/govuk/patterns/check_a_service_is_suitable"
+)
+
+type Model = internal.Model
+
+func Render(t *template.Template, m Model) (template.HTML, error) {
+	return internal.Render(t, m)
+}

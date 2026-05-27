@@ -1,0 +1,14 @@
+{{define "govuk/error-summary"}}
+<div class="govuk-error-summary" role="alert" aria-labelledby="error-summary-title" tabindex="-1">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">{{if .Title}}{{.Title}}{{else}}There is a problem{{end}}</h2>
+  {{if .Items}}
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      {{range .Items}}
+      <li><a href="{{.Href}}">{{.Text}}</a></li>
+      {{end}}
+    </ul>
+  </div>
+  {{end}}
+</div>
+{{end}}

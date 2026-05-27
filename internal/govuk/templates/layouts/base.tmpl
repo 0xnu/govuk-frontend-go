@@ -1,0 +1,34 @@
+{{define "base"}}
+<!doctype html>
+<html lang="en" class="govuk-template">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{block "title" .}}GOV.UK{{end}}</title>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="stylesheet" href="/assets/govuk-frontend.min.css">
+  </head>
+  <body class="govuk-template__body govuk-frontend-supported">
+    <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+    {{template "govuk/header" .}}
+    <div class="govuk-width-container">
+      <div class="govuk-phase-banner">
+        <p class="govuk-phase-banner__content">
+          <strong class="govuk-tag govuk-phase-banner__content__tag">
+            Alpha
+          </strong>
+          <span class="govuk-phase-banner__text">
+            This is a new service. Your <a class="govuk-link" href="/contact-us">feedback</a> helps improve it.
+          </span>
+        </p>
+      </div>
+      <main class="govuk-main-wrapper" id="main-content" role="main">
+        {{block "content" .}}{{end}}
+      </main>
+    </div>
+    {{template "govuk/footer" .}}
+    <script src="/assets/all.bundle.js"></script>
+    <script>if (window.GOVUKFrontend && typeof window.GOVUKFrontend.initAll === "function") { window.GOVUKFrontend.initAll() }</script>
+  </body>
+</html>
+{{end}}

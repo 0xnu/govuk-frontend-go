@@ -1,0 +1,17 @@
+{{define "page"}}
+{{template "base" .}}
+{{end}}
+
+{{define "content"}}
+<h1 class="govuk-heading-l">GOV.UK Design System + Golang + Gin</h1>
+<p class="govuk-body">Using Go keeps the server fast, easy to deploy as a single binary, and straightforward to maintain with a strong standard library.</p>
+<p class="govuk-body">Gin provides simple routing and middleware, so you can build handlers quickly whilst still keeping performance and request handling predictable.</p>
+<p class="govuk-body">Go’s compiled concurrency model helps you handle many requests efficiently with low overhead. That makes it a good fit for services that need consistent response times under load.</p>
+<p class="govuk-body">Together they make it easy to serve GOV.UK Frontend components and assets from one application without a separate frontend build pipeline.</p>
+<h2 class="govuk-heading-m">Learn more</h2>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="https://design-system.service.gov.uk/" target="_blank" rel="noreferrer noopener">GOV.UK Design System</a></li>
+  <li><a class="govuk-link" href="https://go.dev/" target="_blank" rel="noreferrer noopener">Go (Golang)</a></li>
+  <li><a class="govuk-link" href="https://gin-gonic.com/en/" target="_blank" rel="noreferrer noopener">Gin Web Framework</a></li>
+</ul>
+{{end}}

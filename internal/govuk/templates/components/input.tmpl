@@ -1,0 +1,9 @@
+{{define "govuk/input"}}
+<div class="govuk-form-group {{if .ErrorMessage}}govuk-form-group--error{{end}}">
+  <label class="govuk-label" for="{{.ID}}">{{.Label}}</label>
+  {{if .Hint}}<div id="{{.ID}}-hint" class="govuk-hint">{{.Hint}}</div>{{end}}
+  {{if .ErrorMessage}}<p id="{{.ID}}-error" class="govuk-error-message"><span class="govuk-visually-hidden">Error:</span> {{.ErrorMessage}}</p>{{end}}
+  <input class="govuk-input {{if .ErrorMessage}}govuk-input--error{{end}}" id="{{.ID}}" name="{{.Name}}" type="{{.Type}}" value="{{.Value}}" {{if .Hint}}aria-describedby="{{.ID}}-hint{{if .ErrorMessage}} {{.ID}}-error{{end}}"{{else if .ErrorMessage}}aria-describedby="{{.ID}}-error"{{end}}>
+</div>
+{{end}}
+

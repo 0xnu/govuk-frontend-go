@@ -1,0 +1,14 @@
+/bin/
+/dist/
+/node_modules/
+.DS_Store
+coverage.out
+*.coverprofile
+*.log
+*.tgz
+*.zip
+*.tar.gz
+/out/
+/tmp/
+/release/
+/scripts/
