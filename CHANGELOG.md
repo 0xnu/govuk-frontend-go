@@ -1,5 +1,8 @@
 ## CHANGELOG
 
+### 1.0.4 (27/05/2026)
+* Fixed CI golangci-lint failure for Go 1.25 by switching GitHub Action install-mode to goinstall
+
 ### 1.0.3 (27/05/2026)
 * Updated golang.org/x/crypto to fix security alerts
 * Updated golang.org/x/net to fix security alerts
