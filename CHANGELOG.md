@@ -1,5 +1,8 @@
 ## CHANGELOG
 
+### 1.0.5 (27/05/2026)
+* Fixed gofmt -s formatting in internal/app/config/config.go
+
 ### 1.0.4 (27/05/2026)
 * Fixed CI golangci-lint failure for Go 1.25 by switching GitHub Action install-mode to goinstall
 
