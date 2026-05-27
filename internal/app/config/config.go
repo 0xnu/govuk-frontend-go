@@ -8,7 +8,7 @@ import (
 
 type Config struct {
 	ListenAddr string
-	Port string
+	Port       string
 }
 
 func Load() Config {
