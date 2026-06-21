@@ -5,7 +5,7 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/0xnu/govuk-frontend-go.svg)](https://pkg.go.dev/github.com/0xnu/govuk-frontend-go)
 [![License](https://img.shields.io/github/license/0xnu/govuk-frontend-go)](/LICENSE)
 
-GOV.UK Design System integration for [Go](https://go.dev/), with a [Gin](https://gin-gonic.com/en/) adapter.
+[GOV.UK Design System](https://design-system.service.gov.uk/) integration for [Go](https://go.dev/), with a [Gin](https://gin-gonic.com/en/) adapter.
 
 It provides:
 - Versioned GOV.UK Frontend assets
@@ -80,14 +80,14 @@ Coverage:
 - Components and patterns implemented in this module are listed in [here](/DESIGN_SYSTEM_COVERAGE.md).
 
 Versioning:
-- Prefer a tag (e.g. `@v1.0.0`) rather than `@main`.
-- Embedded GOV.UK Frontend assets are shipped for: `6.0.0`, `6.1.0` (and `current` defaults to the latest bundled version).
+- Prefer a tag (e.g. `@v6.2.0`) rather than `@main`.
+- Embedded GOV.UK Frontend assets are shipped for: `6.0.0`, `6.1.0`, `6.2.0` (and `current` defaults to the latest bundled version).
 
 Select the GOV.UK Frontend version you want to serve:
 
 ```go
 g := govukgin.New()
-if err := g.SetGovUKFrontendVersion("6.1.0"); err != nil {
+if err := g.SetGovUKFrontendVersion("6.2.0"); err != nil {
 	panic(err)
 }
 g.Mount(r)
