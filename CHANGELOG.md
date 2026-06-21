@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### 1.0.6 (21/06/2026)
+* Added support for GOV.UK Frontend `6.2.0`
+* Refreshed bundled GOV.UK Frontend assets for `6.0.0`, `6.1.0` and `6.2.0` (`current` now points to `6.2.0`)
+* Migrated `.golangci.yml` to golangci-lint v2 format so `make lint` works with current tooling
+
 ### 1.0.5 (27/05/2026)
 * Fixed gofmt -s formatting in internal/app/config/config.go
 
