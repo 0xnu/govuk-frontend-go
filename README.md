@@ -1,7 +1,7 @@
 ## govuk-frontend-go
 
 [![Release](https://img.shields.io/github/release/0xnu/govuk-frontend-go.svg)](https://github.com/0xnu/govuk-frontend-go/releases/latest)
-[![Go Report Card](https://goreportcard.com/badge/github.com/0xnu/govuk-frontend-go)](https://goreportcard.com/report/github.com/0xnu/govuk-frontend-go)
+[![CI](https://github.com/0xnu/govuk-frontend-go/actions/workflows/ci.yml/badge.svg)](https://github.com/0xnu/govuk-frontend-go/actions/workflows/ci.yml)
 [![Go Reference](https://pkg.go.dev/badge/github.com/0xnu/govuk-frontend-go.svg)](https://pkg.go.dev/github.com/0xnu/govuk-frontend-go)
 [![License](https://img.shields.io/github/license/0xnu/govuk-frontend-go)](/LICENSE)
 
@@ -46,7 +46,7 @@ func main() {
 	r.SetHTMLTemplate(t)
 
 	g := govukgin.New()
-	if err := g.SetGovUKFrontendVersion("6.1.0"); err != nil {
+	if err := g.SetGovUKFrontendVersion("6.3.0"); err != nil {
 		panic(err)
 	}
 	g.Mount(r)
@@ -80,14 +80,14 @@ Coverage:
 - Components and patterns implemented in this module are listed in [here](/DESIGN_SYSTEM_COVERAGE.md).
 
 Versioning:
-- Prefer a tag (e.g. `@v6.2.0`) rather than `@main`.
-- Embedded GOV.UK Frontend assets are shipped for: `6.0.0`, `6.1.0`, `6.2.0` (and `current` defaults to the latest bundled version).
+- Prefer a tag (e.g. `@v6.4.0`) rather than `@main`.
+- Embedded GOV.UK Frontend assets are shipped for: `6.3.0`, `6.4.0` (and `current` defaults to the latest bundled version).
 
 Select the GOV.UK Frontend version you want to serve:
 
 ```go
 g := govukgin.New()
-if err := g.SetGovUKFrontendVersion("6.2.0"); err != nil {
+if err := g.SetGovUKFrontendVersion("6.4.0"); err != nil {
 	panic(err)
 }
 g.Mount(r)

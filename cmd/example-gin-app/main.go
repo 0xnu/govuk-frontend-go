@@ -21,7 +21,7 @@ func main() {
 	r.SetHTMLTemplate(t)
 
 	g := govukgin.New()
-	if err := g.SetGovUKFrontendVersion("6.2.0"); err != nil {
+	if err := g.SetGovUKFrontendVersion("6.4.0"); err != nil {
 		panic(err)
 	}
 	g.Mount(r)
