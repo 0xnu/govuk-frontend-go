@@ -1,3 +1,35 @@
 {{define "govuk/panel"}}
-<div class="govuk-panel"></div>
+{{- $headingLevel := .HeadingLevel -}}
+{{- if not $headingLevel }}{{ $headingLevel = 1 }}{{ end -}}
+{{- $isInterruption := contains .Classes "govuk-panel--interruption" -}}
+<div class="govuk-panel
+{{- if not $isInterruption }} govuk-panel--confirmation{{ end }}
+{{- if .Classes }} {{.Classes}}{{ end }}"{{if .Attributes}} {{.Attributes}}{{end}}>
+  <h{{$headingLevel}} class="govuk-panel__title">
+    {{- if .TitleHTML }}{{.TitleHTML}}{{else if .TitleText}}{{.TitleText}}{{end -}}
+  </h{{$headingLevel}}>
+  {{- if or .HTML .Text }}
+  <div class="govuk-panel__body">
+    {{- if .HTML }}{{.HTML}}{{else}}{{.Text}}{{end -}}
+  </div>
+  {{- end }}
+  {{- if and $isInterruption .Actions }}
+  {{- $actions := .Actions }}
+  <div class="govuk-panel__actions{{if $actions.Classes}} {{$actions.Classes}}{{end}}"{{if $actions.Attributes}} {{$actions.Attributes}}{{end}}>
+    {{- if $actions.Items }}
+    <div class="govuk-button-group">
+      {{- range $actions.Items }}
+      {{- if and .Href (ne .Type "button") (ne .Type "submit") }}
+      <a class="govuk-link govuk-link--inverse{{if .Classes}} {{.Classes}}{{end}}" href="{{.Href}}"{{if .Attributes}} {{.Attributes}}{{end}}>{{.Text}}</a>
+      {{- else if .Href }}
+      <a href="{{.Href}}" role="button" draggable="false" class="govuk-button govuk-button--inverse{{if .Classes}} {{.Classes}}{{end}}" data-module="govuk-button"{{if .Attributes}} {{.Attributes}}{{end}}>{{.Text}}</a>
+      {{- else }}
+      <button type="{{if .Type}}{{.Type}}{{else}}button{{end}}" class="govuk-button govuk-button--inverse{{if .Classes}} {{.Classes}}{{end}}" data-module="govuk-button"{{if .Attributes}} {{.Attributes}}{{end}}>{{.Text}}</button>
+      {{- end }}
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+  {{- end }}
+</div>
 {{end}}

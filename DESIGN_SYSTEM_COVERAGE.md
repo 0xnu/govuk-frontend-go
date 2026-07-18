@@ -23,6 +23,7 @@ The following GOV.UK Design System components have Go template implementations u
 - error-summary (`error_summary`)
 - exit-this-page (`exit_this_page`)
 - fieldset
+- generic-header (`generic_header`)
 - file-upload (`file_upload`)
 - footer
 - header

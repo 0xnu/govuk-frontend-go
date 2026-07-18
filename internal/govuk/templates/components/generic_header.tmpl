@@ -1,0 +1,15 @@
+{{define "govuk/generic-header"}}
+{{- $url := .URL -}}
+{{- if not $url }}{{ $url = "/" }}{{ end -}}
+{{- $containerClasses := .ContainerClasses -}}
+{{- if not $containerClasses }}{{ $containerClasses = "govuk-width-container" }}{{ end -}}
+<div class="govuk-generic-header{{if .Classes}} {{.Classes}}{{end}}"{{if .Attributes}} {{.Attributes}}{{end}}>
+  <div class="govuk-generic-header__container {{$containerClasses}}">
+    <div class="govuk-generic-header__logo">
+      <a href="{{$url}}" class="govuk-generic-header__homepage-link">
+        {{- if .LogoHTML }}{{.LogoHTML}}{{else}}{{.LogoText}}{{end -}}
+      </a>
+    </div>
+  </div>
+</div>
+{{end}}
