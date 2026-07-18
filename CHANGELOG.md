@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### 1.0.7 (18/07/2026)
+* Bumped supported GOV.UK Frontend versions to `6.3.0` and `6.4.0`
+* Removed bundled assets for `6.0.0`, `6.1.0`, `6.2.0` (`current` now points to `6.4.0`)
+* Go Report Card retired, replaced with CI badge linked to GitHub Actions workflow
+
 ### 1.0.6 (21/06/2026)
 * Added support for GOV.UK Frontend `6.2.0`
 * Refreshed bundled GOV.UK Frontend assets for `6.0.0`, `6.1.0` and `6.2.0` (`current` now points to `6.2.0`)
