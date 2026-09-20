@@ -22,6 +22,7 @@ The following GOV.UK Design System components have Go template implementations u
 - error-message (`error_message`)
 - error-summary (`error_summary`)
 - exit-this-page (`exit_this_page`)
+- feedback
 - fieldset
 - generic-header (`generic_header`)
 - file-upload (`file_upload`)
@@ -30,6 +31,7 @@ The following GOV.UK Design System components have Go template implementations u
 - hint
 - inset-text (`inset_text`)
 - label
+- language-navigation (`language_navigation`)
 - notification-banner (`notification_banner`)
 - pagination
 - panel

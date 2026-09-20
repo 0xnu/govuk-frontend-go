@@ -11,10 +11,10 @@ import (
 func TestSetGovUKFrontendVersion(t *testing.T) {
 	a := New()
 
-	if err := a.SetGovUKFrontendVersion("6.3.0"); err != nil {
+	if err := a.SetGovUKFrontendVersion("6.4.0"); err != nil {
 		t.Fatal(err)
 	}
-	if a.AssetsRoot != "build/govuk-frontend/v6.3.0" {
+	if a.AssetsRoot != "build/govuk-frontend/v6.4.0" {
 		t.Fatalf("unexpected AssetsRoot: %q", a.AssetsRoot)
 	}
 

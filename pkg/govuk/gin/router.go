@@ -12,7 +12,7 @@ import (
 	"github.com/0xnu/govuk-frontend-go/internal/govuk/assets"
 )
 
-var SupportedGovUKFrontendVersions = []string{"6.3.0", "6.4.0"}
+var SupportedGovUKFrontendVersions = []string{"6.4.0", "6.5.0"}
 
 type Adapter struct {
 	AssetsPrefix string

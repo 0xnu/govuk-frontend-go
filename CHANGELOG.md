@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.0.8 (20/09/2026)
+* Bumped supported GOV.UK Frontend versions to `6.4.0` and `6.5.0`
+* Removed bundled assets for `6.3.0` (`current` now points to `6.5.0`)
+
 ### 1.0.7 (18/07/2026)
 * Bumped supported GOV.UK Frontend versions to `6.3.0` and `6.4.0`
 * Removed bundled assets for `6.0.0`, `6.1.0`, `6.2.0` (`current` now points to `6.4.0`)
