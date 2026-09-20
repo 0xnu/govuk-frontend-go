@@ -1,0 +1,18 @@
+{{define "govuk/feedback"}}
+{{- $headingLevel := .HeadingLevel -}}
+{{- if not $headingLevel }}{{ $headingLevel = 2 }}{{ end -}}
+<div class="govuk-feedback govuk-width-container{{if .Classes}} {{.Classes}}{{end}}"{{if .Attributes}} {{.Attributes}}{{end}}>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h{{$headingLevel}} class="govuk-feedback__title">
+        {{- if .TitleHTML }}{{.TitleHTML}}{{else}}{{.TitleText}}{{end -}}
+      </h{{$headingLevel}}>
+      {{- if or .HTML .Text }}
+      <div class="govuk-feedback__body">
+        {{- if .HTML }}{{.HTML}}{{else}}<p class="govuk-body">{{.Text}}</p>{{end -}}
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</div>
+{{end}}

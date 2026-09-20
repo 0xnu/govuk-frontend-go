@@ -46,7 +46,7 @@ func main() {
 	r.SetHTMLTemplate(t)
 
 	g := govukgin.New()
-	if err := g.SetGovUKFrontendVersion("6.3.0"); err != nil {
+	if err := g.SetGovUKFrontendVersion("6.5.0"); err != nil {
 		panic(err)
 	}
 	g.Mount(r)
@@ -81,7 +81,7 @@ Coverage:
 
 Versioning:
 - Prefer a tag (e.g. `@v6.4.0`) rather than `@main`.
-- Embedded GOV.UK Frontend assets are shipped for: `6.3.0`, `6.4.0` (and `current` defaults to the latest bundled version).
+- Embedded GOV.UK Frontend assets are shipped for: `6.4.0`, `6.5.0` (and `current` defaults to the latest bundled version).
 
 Select the GOV.UK Frontend version you want to serve:
 
